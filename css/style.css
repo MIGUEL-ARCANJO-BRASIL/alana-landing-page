@@ -420,12 +420,18 @@ footer {
 
   /* Header e Nav */
   header {
+    /* 1. Remove o comportamento grudado */
+    position: relative;
+    top: auto;
+
+    /* 2. Ajustes de layout que você já tem */
     flex-direction: column;
-    height: auto; /* Altura livre para não esmagar o conteúdo */
-    padding: 15px;
+    height: auto;
+    padding: 20px 15px;
     width: 100%;
-    box-sizing: border-box; /* Garante que o padding não "estoure" a largura */
-    overflow: hidden; /* Corta qualquer tentativa de scroll lateral */
+    box-sizing: border-box;
+    overflow: hidden;
+    gap: 1.5rem; /* Dá um respiro entre logo e nav */
   }
 
   nav {
