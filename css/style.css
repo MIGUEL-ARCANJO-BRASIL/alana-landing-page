@@ -420,14 +420,12 @@ footer {
 
   /* Header e Nav */
   header {
-    flex-direction: row;
-    justify-content: space-between;
-    height: 130px;
-    padding: 0 15px;
-    /* Semi-transparente dá um toque premium */
-    backdrop-filter: blur(5px); /* Efeito de vidro fosco */
-  }
-  .header-container h3 {
+    flex-direction: column;
+    height: auto; /* Altura livre para não esmagar o conteúdo */
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não "estoure" a largura */
+    overflow: hidden; /* Corta qualquer tentativa de scroll lateral */
   }
 
   nav {
@@ -435,18 +433,21 @@ footer {
   }
   nav ul {
     display: flex;
+    flex-direction: row; /* Mantém os itens lado a lado */
+    flex-wrap: wrap; /* Se não couber, eles pulam linha sozinhos */
+    justify-content: center;
     gap: 10px;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
-
   nav ul li a {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 5px 8px;
-    border: 1px solid #e5e7eb; /* Bordas suaves nos itens */
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    white-space: nowrap;
     border-radius: 4px;
+    border: 1px solid #e5e7eb; /* Bordas suaves nos itens */
   }
 
   /* Efeito ao tocar (importante para mobile) */
